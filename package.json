@@ -15,8 +15,18 @@
     "@nuxt/content": "^2.12.1",
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxtjs/seo": "2.0.0-rc.10",
+    "@nuxtjs/tailwindcss": "^6.12.0",
     "eslint": "^8.28.0",
     "nuxt": "^3.6.2",
+    "shadcn-nuxt": "^0.10.4",
     "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-vue-next": "^0.376.0",
+    "radix-vue": "^1.7.2",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

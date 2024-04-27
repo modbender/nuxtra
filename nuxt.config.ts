@@ -9,7 +9,7 @@ console.log(currentDir);
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ["@nuxt/content", "@nuxtjs/seo"],
+  modules: ["@nuxt/content", "@nuxtjs/seo", "shadcn-nuxt", "@nuxtjs/tailwindcss"],
 
   content: {
     documentDriven: true,
