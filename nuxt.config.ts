@@ -1,39 +1,34 @@
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
+import { createResolver } from "@nuxt/kit";
 
-const currentDir = dirname(fileURLToPath(import.meta.url));
+const { resolve } = createResolver(import.meta.url);
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  css: [resolve("./assets/css/tailwind.css")],
 
   modules: [
     "@nuxt/content",
     "@nuxtjs/seo",
+    "@nuxtjs/google-fonts",
     "@nuxtjs/tailwindcss",
     "@nuxtjs/color-mode",
     "shadcn-nuxt",
   ],
 
-  content: {
-    documentDriven: true,
+  content: {},
+
+  googleFonts: {
+    families: {
+      Roboto: true,
+    },
+  },
+
+  tailwindcss: {
+    cssPath: false,
   },
 
   colorMode: {
     preference: "dark",
     classSuffix: "",
-  },
-
-  tailwindcss: {
-    cssPath: [
-      join(currentDir, "./assets/css/tailwind.css"),
-      { injectPosition: "first" },
-    ],
-    configPath: "tailwind.config",
-    exposeConfig: {
-      level: 2,
-    },
-    config: {},
-    viewer: true,
   },
 });

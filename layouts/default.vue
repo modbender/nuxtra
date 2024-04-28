@@ -1,5 +1,5 @@
 <template>
-  <header></header>
+  <LayoutNavbar />
   <main>
     <slot />
   </main>
